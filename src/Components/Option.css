@@ -1,0 +1,157 @@
+:root{
+  --blue: #97bbd3;
+  --black: #131111;
+  --navy: #005070;
+  --grey: #e6e2e2;
+  --yellow: #e5cf6e;
+}
+
+.option {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.option-area{ 
+  height: 100vh;
+  width: 200px;
+  padding: 20px;
+  background-color: var(--blue);
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  right: -300px;
+  transition: all 0.5s;
+  opacity: 0;
+  border-radius: 5px;
+  border-left: 10px solid;
+  border-color: var(--navy);
+  overflow: scroll;
+}
+
+.option-area h2 {
+  font-size: 30px;
+  border-bottom: 1px solid var(--black);
+}
+
+.open .option-area {
+  right: 0;
+  opacity: 1;
+}
+
+
+.toggle-btn {
+  border-radius: 10px;
+  background-color: var(--yellow);
+  width: 40px;
+  height: 40px;
+  display: block;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 3;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.open .toggle-btn {
+  opacity: 1;
+}
+
+.toggle-btn span {
+  position: absolute;
+  display: block;
+  left: 5px;
+  width: 30px;
+  height: 2px;
+  background-color: var(--black);
+  transition: all 0.5s;
+  border-radius: 4px;
+}
+
+.open .toggle-btn span:nth-child(1) {
+  transform: translateY(11px) rotate(-315deg);
+}
+
+.open .toggle-btn span:nth-child(2) {
+  opacity: 0;
+}
+
+.open .toggle-btn span:nth-child(3) {
+  transform: translateY(-11px) rotate(315deg);
+}
+
+.toggle-btn span:nth-child(1) {
+  top: 8px;
+}
+
+.toggle-btn span:nth-child(2) {
+  top: 19px;
+}
+
+.toggle-btn span:nth-child(3) {
+  bottom: 8px;
+}
+
+main{
+  display: grid;
+  gap: 20px;
+}
+
+section {
+  margin: 10px;
+}
+
+section h3 {
+  font-size: 25px;
+  margin: 0;
+  padding: 10px 0;
+}
+
+section ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 5px;
+}
+
+section ul li {
+  font-size: 20px;
+  border-bottom: 1px solid var(--black);
+}
+
+input {
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+  border-radius: 5px;
+  border-color: var(--yellow);
+  text-align: center;
+}
+
+.caution {
+  margin: 5px;
+  color: rgb(189, 15, 15);
+  font-size: small;
+}
+
+.btn {
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+  border: 1px solid var(--yellow);
+  border-radius: 5px;
+  background-color: var(--grey);
+  box-shadow: 1px 1px 2px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+.disable .btn {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.btn:hover {
+  background-color: var(--yellow);
+}

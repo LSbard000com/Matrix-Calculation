@@ -1,0 +1,26 @@
+:root{
+  --blue: #97bbd3;
+  --black: #131111;
+  --navy: #005070;
+  --grey: #e6e2e2;
+}
+
+.App {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: var(--white);
+  color: var(--black);
+  font-family: "Yusei Magic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+  margin: 0;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 45px;
+}
