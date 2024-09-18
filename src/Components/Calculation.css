@@ -13,8 +13,6 @@
 }
 
 .result .result-area {
-    width: 50%;
-    height: 100%;
     margin: 0 auto 20px;
     border: 1px solid var(--black);
     border-radius: 20px;
