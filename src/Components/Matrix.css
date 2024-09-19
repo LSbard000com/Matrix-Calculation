@@ -32,3 +32,13 @@ p {
   text-align: center;
 }
 
+@media (min-width: 700px){
+  .input-area {
+    display: flex;
+  }
+
+  .input-area .matrix{
+    margin: 50px;
+  }
+}
+
