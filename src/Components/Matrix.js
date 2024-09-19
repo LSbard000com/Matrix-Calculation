@@ -139,7 +139,8 @@ const Matrix = () => {
   return (
     <div>
       <Option onInputChange={recieveChangeVal} />
-      <header>行列の要素の値を整数値で入力してください。</header>
+      <p>設定画面から行数と列数を入力してください。</p>
+      <p>行列の要素の値を整数値で入力してください。</p>
       <div className="input-area">
         <div className="matrix">
           <h2 onClick={checkA}>行列A</h2>
