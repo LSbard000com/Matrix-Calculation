@@ -23,7 +23,7 @@ const Option = ({onInputChange}) => {
 
 
     // トグルボタンでopenクラスを管理
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(true);
     const handleToggle = () => {
         setIsOpen(!isOpen);
     };
