@@ -93,46 +93,37 @@ const Matrix = () => {
   // 取得した行数、列数で行列の入力エリアを作成
   // 行列Aコンポーネント
   const InputMxA = () => {
-      const matrixA = [];
+    return matrixAArray.map((row, i) => (
+      <div key={i} style={{ marginBottom: '10px' }}>
+        {row.map((value, j) => (
+          <input
+            key={`${i}-${j}`}
+            type="number"
+            value={matrixAArray[i][j] !== undefined ? matrixAArray[i][j] : ""}
+            onChange={(e) => handleInputChangeA(i, j, Number(e.target.value))}
+            style={{ margin: '5px' }}
+          />
+        ))}
+      </div>
+    ));
+  };
   
-      for (let i = 0; i < mxrowA; i++) {
-        const row = [];
-        for (let j = 0; j < mxcolA; j++) {
-          row.push(
-            <input 
-              key={`${i}-${j}`} 
-              type="number"
-              value={matrixAArray[i] && matrixAArray[i][j] !== undefined ? matrixAArray[i][j] : ""}
-              onChange={(e) => {handleInputChangeA(i,j,Number(e.target.value))}}
-              style={{ margin: '5px' }} 
-               />
-          );
-        }
-        matrixA.push(<div key={i} style={{ marginBottom: '10px' }}>{row}</div>);
-      }
-      return matrixA;
-    };
 
     // 行列Bコンポーネント
     const InputMxB = () => {
-      const matrixB = [];
-  
-      for (let i = 0; i < mxrowB; i++) {
-        const row = [];
-        for (let j = 0; j < mxcolB; j++) {
-          row.push(
-            <input 
-              key={`${i}-${j}`} 
+      return matrixBArray.map((row, i) => (
+        <div key={i} style={{ marginBottom: '10px' }}>
+          {row.map((value, j) => (
+            <input
+              key={`${i}-${j}`}
               type="number"
-              value={matrixBArray[i] && matrixBArray[i][j] !== undefined ? matrixBArray[i][j] : ""}
-              onChange={(e) => {handleInputChangeB(i,j,Number(e.target.value))}}
-              style={{ margin: '5px' }} 
-               />
-          );
-        }
-        matrixB.push(<div key={i} style={{ marginBottom: '10px' }}>{row}</div>);
-      }
-      return matrixB;
+              value={matrixBArray[i][j] !== undefined ? matrixBArray[i][j] : ""}
+              onChange={(e) => handleInputChangeB(i, j, Number(e.target.value))}
+              style={{ margin: '5px' }}
+            />
+          ))}
+        </div>
+      ));
     };
 
 
