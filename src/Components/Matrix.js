@@ -36,7 +36,7 @@ const Matrix = () => {
   const [matrixAArray, setmatrixAArray] = useState([])
   const [matrixBArray, setmatrixBArray] = useState([])
   
-  // ＝＝＝＝行列A＝＝＝＝
+  // 行列Aの2次元配列を生成する関数
   const createMatrixA = (rows, cols) => {
     const arr = []
     for(let i = 0 ; i < rows ; i++){
@@ -49,20 +49,6 @@ const Matrix = () => {
     setmatrixAArray(arr)
   }
 
-  useEffect(() => {
-    createMatrixA(mxrowA, mxcolA)
-  }, [mxrowA, mxcolA]);
-
-  const handleInputChangeA = (row, col, value) => {
-    const newMatrixValues =  [...matrixAArray]
-    newMatrixValues[row][col] = value
-    setmatrixAArray(newMatrixValues)
-  }
-  const checkA = () => {
-    console.log(matrixAArray)
-  }
-
-  // ＝＝＝＝行列B＝＝＝＝
   const createMatrixB = (rows, cols) => {
     const initMatrix = []
     for(let i = 0 ; i < rows ; i++){
@@ -76,17 +62,32 @@ const Matrix = () => {
     return initMatrix;
   }
 
+  // 行列Aの列数、行数が更新されたら「行列Aの2次元配列を生成する関数」を実行
   useEffect(() => {
-    createMatrixB(mxrowB, mxcolB)
-  }, [mxrowB, mxcolB]);
+    if (matrixAArray.length !== mxrowA || (matrixAArray[0] && matrixAArray[0].length !== mxcolA)) {
+      createMatrixA(mxrowA, mxcolA);
+    }
+  }, [mxrowA, mxcolA, matrixAArray]);
+  
+  useEffect(() => {
+    if (matrixBArray.length !== mxrowB || (matrixBArray[0] && matrixBArray[0].length !== mxcolB)) {
+      createMatrixB(mxrowB, mxcolB);
+    }
+  }, [mxrowB, mxcolB, matrixBArray]);
+  
+
+
+  // 入力された値をセット
+  const handleInputChangeA = (row, col, value) => {
+    const newMatrixValues =  [...matrixAArray]
+    newMatrixValues[row][col] = value
+    setmatrixAArray(newMatrixValues)
+  }
 
   const handleInputChangeB = (row, col, value) => {
     const newMatrixValues = [...matrixBArray]
     newMatrixValues[row][col] = value
     setmatrixBArray(newMatrixValues)
-  }
-  const checkB = () => {
-    console.log(matrixBArray)
   }
 
 
@@ -134,11 +135,11 @@ const Matrix = () => {
       <p>行列の要素の値を整数値で入力してください。</p>
       <div className="input-area">
         <div className="matrix">
-          <h2 onClick={checkA}>行列A</h2>
+          <h2>行列A</h2>
           <div className="area"><InputMxA /></div>
         </div>
         <div className="matrix">
-          <h2 onClick={checkB}>行列B</h2>
+          <h2>行列B</h2>
           <div className="area"><InputMxB /></div>
         </div>
       </div>
