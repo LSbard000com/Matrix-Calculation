@@ -1,0 +1,46 @@
+:root{
+    --blue: #97bbd3;
+    --black: #131111;
+    --navy: #005070;
+    --grey: #e6e2e2;
+    --yellow: #e5cf6e;
+  }
+
+.keyboard {
+    width: 180px;
+    padding: 5px 0;
+    margin: auto;
+    display: grid;
+    place-items: center;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: var(--blue);
+    z-index: 3;
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* display: none; */
+}
+
+.keyboard textarea{
+    resize: none;
+    width: 150px;
+    border: 1px solid #000;
+}
+
+.keyboard table {
+    width: 150px;
+    table-layout: fixed;
+    text-align: center;
+}
+
+.keyboard table tr td {
+    border: 1px solid #000;
+    border-radius: 2px;
+    background-color: var(--grey);
+}
+
+.keyboard table tr td:hover {
+    background-color: var(--yellow);
+}

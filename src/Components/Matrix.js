@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import "./Matrix.css"
 import Option from './Option'
 import Calculation from './Calculation'
+import Keyboard from './Keyboard'
 
 
 const Matrix = () => {
@@ -142,6 +143,7 @@ const Matrix = () => {
           <h2>行列B</h2>
           <div className="area"><InputMxB /></div>
         </div>
+        <Keyboard />
       </div>
       <Calculation mxAdata={matrixAArray} mxBdata={matrixBArray} />
     </div>
