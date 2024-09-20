@@ -68,10 +68,10 @@ const Option = ({onInputChange}) => {
                     <h3>行列A</h3>
                     <ul>
                         <li>
-                            行数：<input type="number" min="1" max="5" onChange={doChangeRowA} />
+                            行数：<input type="number" min="1" max="10" onChange={doChangeRowA} />
                         </li>
                         <li>
-                            列数：<input type="number" min="1" max="5" onChange={doChangeColA}/>
+                            列数：<input type="number" min="1" max="10" onChange={doChangeColA}/>
                         </li>
                     </ul>
                 </section>
@@ -79,10 +79,10 @@ const Option = ({onInputChange}) => {
                     <h3>行列B</h3>
                     <ul>
                         <li>
-                            行数：<input type="number" min="1" max="5" onChange={doChangeRowB}/>
+                            行数：<input type="number" min="1" max="10" onChange={doChangeRowB}/>
                         </li>
                         <li>
-                            列数：<input type="number" min="1" max="5" onChange={doChangeColB}/>
+                            列数：<input type="number" min="1" max="10" onChange={doChangeColB}/>
                         </li>
                     </ul>
                 </section>

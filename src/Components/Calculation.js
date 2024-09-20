@@ -54,7 +54,7 @@ const Calculation = ({mxAdata, mxBdata}) => {
       const row = []
       for(let j = 0 ; j < calcresult[0].length ; j++ ){
         row.push(
-          <td key={`${i}-${j}`} style={{ padding: '15px 20px'}} >{calcresult[i][j]}</td>
+          <td key={`${i}-${j}`} style={{ padding: '0 10px'}} >{calcresult[i][j]}</td>
         )
       }
       arr.push(<tr key={i}>{row}</tr>)
