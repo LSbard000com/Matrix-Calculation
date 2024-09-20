@@ -53,13 +53,18 @@ function Keyboard({isInput, setIsInput,active, ChangeA, ChangeB}) {
         setValue("")
     }
 
-
+    // 正負の切り替えボタン
+    const signChange = () => {
+        let newvalue = value * -1
+        setValue(newvalue)
+    }
 
     return (
         <div className={isInput ? 'active' : ''}>
         <div className='keyboard'>
             <input type="text" value={value} />
             <table>
+                <tr><td colSpan={3} onClick={signChange}>正負を切り替える</td></tr>
                 <tr><td onClick={Input7}>7</td><td onClick={Input8}>8</td><td onClick={Input9}>9</td></tr>
                 <tr><td onClick={Input4}>4</td><td onClick={Input5}>5</td><td onClick={Input6}>6</td></tr>
                 <tr><td onClick={Input1}>1</td><td onClick={Input2}>2</td><td onClick={Input3}>3</td></tr>

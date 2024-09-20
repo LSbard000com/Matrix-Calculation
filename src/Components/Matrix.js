@@ -130,7 +130,7 @@ const Matrix = () => {
       ));
     };
 
-  // テンキーのクラス操作関数 
+  // テンキーの出現操作とクリックしたinputタグの位置情報を格納
   const [isInput, setIsInput] = useState(false);
   const [active, setActive] = useState([])
   const handleNumInput = (row,col,judge) => {
