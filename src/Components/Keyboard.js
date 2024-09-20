@@ -14,7 +14,7 @@ const Nums = () => {
         <table>
             <tr key={i}>
             {row.map((value, j) => (
-                <td key={value}>{value}</td>
+                <td key={value} >{value}</td>
             ))}
             </tr>
         </table>
@@ -22,9 +22,9 @@ const Nums = () => {
     )
 }
 
-function Keyboard() {
+function Keyboard({isInput}) {
     return (
-        <div className="keyboard">
+        <div className={`keyboard ${isInput ? 'active' : ''}`}>
             <textarea></textarea>
             <Nums />
         </div>
