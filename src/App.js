@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <div>
-        <h1>行列積計算サイト</h1>
+        <h1>行列積計算</h1>
       </div>
       <Matrix />
     </div>

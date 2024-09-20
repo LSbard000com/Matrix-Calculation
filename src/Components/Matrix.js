@@ -142,12 +142,13 @@ const Matrix = () => {
     <div>
       <Option onInputChange={recieveChangeVal} />
       <p>設定画面から行数と列数を入力してください。</p>
-      <p>行列の要素の値を整数値で入力してください。</p>
+      <p>要素の値は整数値で入力してください。</p>
       <div className="input-area">
         <div className="matrix">
           <h2>行列A</h2>
           <div className="area"><InputMxA /></div>
         </div>
+        <div id="x">×</div>
         <div className="matrix">
           <h2>行列B</h2>
           <div className="area"><InputMxB /></div>
