@@ -23,13 +23,12 @@
     opacity: 0;
 }
 
-.active{
+.active .keyboard{
     opacity: 1;
     left: 50%;
 }
 
-.keyboard textarea{
-    resize: none;
+.keyboard input{
     width: 150px;
     border: 1px solid #000;
 }
@@ -44,6 +43,15 @@
     border: 1px solid #000;
     border-radius: 2px;
     background-color: var(--grey);
+    cursor: pointer;
+}
+
+.keyboard table tr #clear {
+    background-color: #ffabab;
+}
+
+.keyboard table tr #enter {
+    background-color: #b7fa9d;
 }
 
 .keyboard table tr td:hover {

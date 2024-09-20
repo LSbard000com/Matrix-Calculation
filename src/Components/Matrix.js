@@ -96,7 +96,7 @@ const Matrix = () => {
   // 行列Aコンポーネント
   const InputMxA = () => {
     return matrixAArray.map((row, i) => (
-      <div key={i} style={{ marginBottom: '10px' }}>
+      <div key={i}style={{ marginBottom: '10px' }}>
         {row.map((value, j) => (
           <input
             key={`${i}-${j}`}
@@ -104,7 +104,7 @@ const Matrix = () => {
             value={matrixAArray[i][j] !== undefined ? matrixAArray[i][j] : ""}
             onChange={(e) => handleInputChangeA(i, j, Number(e.target.value))}
             style={{ margin: '5px' }}
-            onClick={handleNumInput}
+            onClick={() => handleNumInput(i,j,0)}
           />
         ))}
       </div>
@@ -123,7 +123,7 @@ const Matrix = () => {
               value={matrixBArray[i][j] !== undefined ? matrixBArray[i][j] : ""}
               onChange={(e) => handleInputChangeB(i, j, Number(e.target.value))}
               style={{ margin: '5px' }}
-              onClick={handleNumInput}
+              onClick={() => handleNumInput(i,j,1)}
             />
           ))}
         </div>
@@ -132,10 +132,11 @@ const Matrix = () => {
 
   // テンキーのクラス操作関数 
   const [isInput, setIsInput] = useState(false);
-  const handleNumInput = () => {
-      setIsInput(!isInput);
+  const [active, setActive] = useState([])
+  const handleNumInput = (row,col,judge) => {
+      setIsInput(true);
+      setActive([row,col,judge])
   };
-
 
   return (
     <div>
@@ -151,7 +152,7 @@ const Matrix = () => {
           <h2>行列B</h2>
           <div className="area"><InputMxB /></div>
         </div>
-        <Keyboard isInput={isInput}/>
+        <Keyboard isInput={isInput} setIsInput={setIsInput} active={active} ChangeA={handleInputChangeA} ChangeB={handleInputChangeB} />
       </div>
       <Calculation mxAdata={matrixAArray} mxBdata={matrixBArray} />
     </div>
