@@ -10,7 +10,6 @@ const Calculation = ({mxAdata, mxBdata}) => {
   useEffect(() => {
     setRowA(mxAdata.length)
     setColA(mxAdata[0] !== undefined ? mxAdata[0].length : 1)
-    setRowB(mxBdata.length)
     setColB(mxBdata[0] !== undefined ? mxBdata[0].length : 1)
   },[mxAdata, mxBdata])
 
