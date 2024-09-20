@@ -28,9 +28,16 @@
   border-left: 10px solid;
   border-color: var(--navy);
   overflow: scroll;
+  display: grid;
 }
 
-.option-area h2 {
+.option-area header{
+  margin-top: 10px;
+  height: 50px;
+}
+
+.option-area header h2 {
+  margin: 0;
   font-size: 30px;
   border-bottom: 1px solid var(--black);
 }
@@ -155,3 +162,27 @@ input {
 .btn:hover {
   background-color: var(--yellow);
 }
+
+.information {
+  margin-top: 50px;
+  position: relative;
+}
+
+.information ul {
+  margin-bottom: 30px;
+  list-style: none;
+  position: absolute;
+  bottom: 0;
+}
+
+.information ul li {
+  font-family: sans-serif;
+  font-size: 10pt ;
+  margin: 5px;
+}
+
+.information ul li a {
+  color: #131111;
+}
+
+

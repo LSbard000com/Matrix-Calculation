@@ -91,6 +91,12 @@ const Option = ({onInputChange}) => {
             <div className={`${isdisable ? 'disable' : ''}`} onClick={clickBtn}>
                 <div className="btn">行列を生成する</div>
             </div>
+            <div className='information'>
+                <ul>
+                    <li><a href="https://forms.gle/WaEyLvgPoLYBF73S8">フィードバック</a></li>
+                    <li>&copy;行列積計算</li>
+                </ul>
+            </div>
         </div>
         <div className="toggle-btn" onClick={handleToggle}>
             <span></span>
