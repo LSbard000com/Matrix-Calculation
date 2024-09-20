@@ -48,7 +48,7 @@ const Option = ({onInputChange}) => {
 
     // 作成ボタンを押すとMatrixコンポーネントに値を送る
     const clickBtn = (ra,ca,rb,cb) => {
-        if(colA == rowB){
+        if(colA === rowB){
             ra = rowA
             ca = colA
             rb = rowB

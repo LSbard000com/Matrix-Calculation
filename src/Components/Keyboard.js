@@ -44,7 +44,7 @@ function Keyboard({isInput, setIsInput,active, ChangeA, ChangeB}) {
 
     // エンターキーでテンキー閉じ、入力値を反映
     const handleEnter = () => {
-        if(active[2] == 0){
+        if(active[2] === 0){
             ChangeA(active[0],active[1],value)
         } else {
             ChangeB(active[0],active[1],value)

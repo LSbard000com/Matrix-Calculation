@@ -5,7 +5,6 @@ const Calculation = ({mxAdata, mxBdata}) => {
   // Matrixコンポーネントから行列A,行列Bの行数列数を取得
   const [rowA, setRowA] = useState(1)
   const [colA, setColA] = useState(1)
-  const [rowB, setRowB] = useState(1)
   const [colB, setColB] = useState(1)
 
   useEffect(() => {
