@@ -15,7 +15,7 @@
 
 .option-area{ 
   height: 100vh;
-  width: 200px;
+  width: 300px;
   padding: 20px;
   background-color: var(--blue);
   z-index: 2;
@@ -28,17 +28,16 @@
   border-left: 10px solid;
   border-color: var(--navy);
   overflow: scroll;
-  display: grid;
 }
 
 .option-area header{
   margin-top: 10px;
-  height: 50px;
+  height: 100px;
 }
 
 .option-area header h2 {
   margin: 0;
-  font-size: 30px;
+  font-size: 50px;
   border-bottom: 1px solid var(--black);
 }
 
@@ -102,6 +101,7 @@
 }
 
 main{
+  height: 600px;
   display: grid;
   gap: 20px;
 }
@@ -111,7 +111,7 @@ section {
 }
 
 section h3 {
-  font-size: 25px;
+  font-size: 40px;
   margin: 0;
   padding: 10px 0;
 }
@@ -123,13 +123,13 @@ section ul {
 }
 
 section ul li {
-  font-size: 20px;
+  font-size: 30px;
   border-bottom: 1px solid var(--black);
 }
 
-input {
-  width: 30px;
-  height: 30px;
+section ul li input {
+  width: 50px;
+  height: 50px;
   margin: 10px;
   border-radius: 5px;
   border-color: var(--yellow);
@@ -137,12 +137,22 @@ input {
 }
 
 .caution {
+  height: 100px;
   margin: 5px;
   color: rgb(189, 15, 15);
-  font-size: small;
+  font-size: 16pt;
 }
 
-.btn {
+.btndiv{
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btndiv .btn {
+  width: 150px;
+  height: 50px;
   text-align: center;
   margin: 0;
   padding: 10px;
@@ -152,6 +162,9 @@ input {
   box-shadow: 1px 1px 2px;
   cursor: pointer;
   transition-duration: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .disable .btn {
@@ -164,12 +177,16 @@ input {
 }
 
 .information {
-  margin-top: 50px;
+  height: 200px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
   position: relative;
 }
 
 .information ul {
   margin-bottom: 30px;
+  padding: 0;
   list-style: none;
   position: absolute;
   bottom: 0;
@@ -177,7 +194,7 @@ input {
 
 .information ul li {
   font-family: sans-serif;
-  font-size: 10pt ;
+  font-size: 14pt ;
   margin: 5px;
 }
 

@@ -88,7 +88,7 @@ const Option = ({onInputChange}) => {
                 </section>
             </main>
             <div style={{ whiteSpace: 'pre-line' }} className="caution">{msg}</div>
-            <div className={`${isdisable ? 'disable' : ''}`} onClick={clickBtn}>
+            <div className={`btndiv ${isdisable ? 'disable' : ''}`} onClick={clickBtn}>
                 <div className="btn">行列を生成する</div>
             </div>
             <div className='information'>
