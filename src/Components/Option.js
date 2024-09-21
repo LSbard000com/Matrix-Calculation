@@ -34,17 +34,30 @@ const Option = ({onInputChange}) => {
     const [isdisable, setIsdisable] = useState(false)
 
     useEffect(() => {
-        if(colA === rowB){
-            setMsg("")
-            setIsdisable(false)
-        } else {
-            setMsg(
-                `※行列の計算ができません。
-                行列Aの列数と行列Bの行数を同じ値にしてください。`
-            )
-            setIsdisable(true)
+        const checkarr = [rowA, colA, rowB, colB]
+        let checkcounter = 0
+        for(let i = 0 ; i < 4 ; i ++){
+            if( checkarr[i] <= 10){
+                checkcounter++
+            } 
         }
-    }, [colA, rowB])
+
+        if(checkcounter === 4){
+            if(colA === rowB){
+                setMsg("")
+                setIsdisable(false)
+            } else {
+                setMsg(
+                    `※行列の計算ができません。
+                    行列Aの列数と行列Bの行数を同じ値にしてください。`
+                )
+                setIsdisable(true)
+            }
+        } else {
+            setMsg(`※行数、列数の最大は10までです。`)
+            setIsdisable(true)
+        } 
+    }, [rowA, colA, rowB, colB])
 
     // 作成ボタンを押すとMatrixコンポーネントに値を送る
     const clickBtn = (ra,ca,rb,cb) => {
